@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="760" viewBox="0 0 1000 760" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1000" height="760" fill="#0b1016"/>
+  <!-- header -->
+  <rect x="0" y="0" width="1000" height="48" fill="#111a23"/>
+  <text x="20" y="31" fill="#e6eef5" font-size="18" font-weight="700">Spectrum Watch</text>
+  <text x="175" y="31" fill="#6b8299" font-size="13">Operator console · demo · RF + radar fusion</text>
+  <text x="980" y="31" fill="#9fb2c4" font-size="13" text-anchor="end">Site: power station (sim) · 02:13:41</text>
+
+  <!-- left: radar PPI -->
+  <rect x="20" y="66" width="360" height="330" rx="8" fill="#0f1720" stroke="#1d2834"/>
+  <text x="36" y="90" fill="#9fb2c4" font-size="12" font-weight="600" letter-spacing="1">RADAR (optional sensor)</text>
+  <g transform="translate(200,240)">
+    <circle r="130" fill="none" stroke="#1d3a2a"/>
+    <circle r="87" fill="none" stroke="#1d3a2a"/>
+    <circle r="43" fill="none" stroke="#1d3a2a"/>
+    <line x1="-130" y1="0" x2="130" y2="0" stroke="#1d3a2a"/>
+    <line x1="0" y1="-130" x2="0" y2="130" stroke="#1d3a2a"/>
+    <text x="4" y="-133" fill="#4d6073" font-size="10">N</text>
+    <text x="90" y="-4" fill="#4d6073" font-size="9">400 m</text>
+    <!-- sweep wedge -->
+    <path d="M0,0 L71,-110 A130,130 0 0,1 105,-77 Z" fill="#3ddc84" opacity=".10"/>
+    <!-- bird track (ignored) -->
+    <circle cx="-70" cy="45" r="3" fill="#6b8299"/>
+    <text x="-64" y="58" fill="#6b8299" font-size="10">bird 0.93</text>
+    <!-- drone track history -->
+    <polyline points="118,-30 108,-44 99,-56 92,-66 86,-74" fill="none" stroke="#ff4d5e" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <circle cx="86" cy="-74" r="6" fill="#ff4d5e"/>
+    <circle cx="86" cy="-74" r="12" fill="none" stroke="#ff4d5e" opacity=".5"/>
+    <text x="-20" y="-92" fill="#ff4d5e" font-size="11" font-weight="700">#412 drone 0.81</text>
+  </g>
+  <text x="36" y="384" fill="#6b8299" font-size="11">Track #412 · 380 m · bearing 047° · 12 m/s · rotor signature</text>
+
+  <!-- left: RF bands -->
+  <rect x="20" y="410" width="360" height="330" rx="8" fill="#0f1720" stroke="#1d2834"/>
+  <text x="36" y="434" fill="#9fb2c4" font-size="12" font-weight="600" letter-spacing="1">RF, SAME TIME WINDOW (±3 s)</text>
+  <g font-size="12">
+    <g transform="translate(36,458)"><rect width="328" height="40" rx="5" fill="#131d27"/><text x="12" y="25" fill="#c9d6e2">433 MHz</text><text x="316" y="25" fill="#6b8299" text-anchor="end">nothing new</text></g>
+    <g transform="translate(36,504)"><rect width="328" height="40" rx="5" fill="#131d27"/><text x="12" y="25" fill="#c9d6e2">915-920 MHz</text><text x="316" y="25" fill="#6b8299" text-anchor="end">nothing new</text></g>
+    <g transform="translate(36,550)"><rect width="328" height="40" rx="5" fill="#131d27"/><text x="12" y="25" fill="#c9d6e2">2.4 GHz control</text><text x="316" y="25" fill="#6b8299" text-anchor="end">site Wi-Fi only (baseline)</text></g>
+    <g transform="translate(36,596)"><rect width="328" height="40" rx="5" fill="#131d27"/><text x="12" y="25" fill="#c9d6e2">5.8 GHz video</text><text x="316" y="25" fill="#6b8299" text-anchor="end">nothing new</text></g>
+    <g transform="translate(36,642)"><rect width="328" height="40" rx="5" fill="#131d27"/><text x="12" y="25" fill="#c9d6e2">Cellular uplink · Remote ID</text><text x="316" y="25" fill="#6b8299" text-anchor="end">nothing new</text></g>
+  </g>
+  <text x="36" y="718" fill="#ff4d5e" font-size="12" font-weight="600">→ No radio link anywhere a drone could use</text>
+
+  <!-- right: analysis card -->
+  <rect x="400" y="66" width="580" height="674" rx="8" fill="#0f1720" stroke="#ff4d5e" stroke-opacity=".6"/>
+  <rect x="400" y="66" width="6" height="674" fill="#ff4d5e"/>
+  <text x="426" y="100" fill="#ff4d5e" font-size="19" font-weight="700">Possible fibre-optic or autonomous drone</text>
+  <text x="426" y="124" fill="#ff4d5e" font-size="14">Radar sees a drone. There is no radio link.</text>
+
+  <g font-size="11">
+    <rect x="426" y="140" width="128" height="22" rx="11" fill="none" stroke="#ff4d5e" stroke-opacity=".5"/><text x="490" y="155" fill="#e6eef5" text-anchor="middle">Radar + RF fusion</text>
+    <rect x="562" y="140" width="112" height="22" rx="11" fill="none" stroke="#ff4d5e" stroke-opacity=".5"/><text x="618" y="155" fill="#e6eef5" text-anchor="middle">No RF emission</text>
+    <rect x="682" y="140" width="70" height="22" rx="11" fill="#ff4d5e"/><text x="717" y="155" fill="#0b1016" text-anchor="middle" font-weight="700">THREAT</text>
+  </g>
+
+  <text x="426" y="192" fill="#6b8299" font-size="11">AI confidence</text>
+  <rect x="510" y="183" width="380" height="10" rx="5" fill="#1d2834"/>
+  <rect x="510" y="183" width="281" height="10" rx="5" fill="#ff4d5e"/>
+  <text x="906" y="193" fill="#ff4d5e" font-size="13" font-weight="700">74%</text>
+
+  <g font-size="12">
+    <text x="426" y="226" fill="#6b8299">Radar track</text><text x="600" y="226" fill="#e6eef5">#412, 380 m, NE (047°)</text>
+    <text x="426" y="248" fill="#6b8299">Speed / height</text><text x="600" y="248" fill="#e6eef5">12 m/s, ~60 m</text>
+    <text x="426" y="270" fill="#6b8299">Radar class</text><text x="600" y="270" fill="#e6eef5">drone 0.81 (rotor signature)</text>
+    <text x="426" y="292" fill="#6b8299">Track length</text><text x="600" y="292" fill="#e6eef5">34 s</text>
+    <text x="426" y="314" fill="#6b8299">RF in drone bands</text><text x="600" y="314" fill="#e6eef5">none</text>
+  </g>
+
+  <text x="426" y="350" fill="#9fb2c4" font-size="11" font-weight="600" letter-spacing="1">WHY THE AI THINKS SO</text>
+  <g font-size="12.5" fill="#d5e0ea">
+    <text x="426" y="374">• The radar has tracked it for 34 s with a rotor signature: a multirotor,</text>
+    <text x="438" y="391">not a bird.</text>
+    <text x="426" y="415">• At the same time and bearing, no new emission in any drone band:</text>
+    <text x="438" y="432">no control link, no video, no Remote ID.</text>
+    <text x="426" y="456">• A drone with no radio is either on a fibre-optic cable or flying a</text>
+    <text x="438" y="473">pre-programmed route. RF sensors alone cannot see either.</text>
+    <text x="426" y="497">• Neither sensor could make this call alone.</text>
+  </g>
+
+  <text x="426" y="533" fill="#9fb2c4" font-size="11" font-weight="600" letter-spacing="1">ALTERNATIVES CONSIDERED</text>
+  <g font-size="12.5" fill="#d5e0ea">
+    <text x="426" y="557">• Large bird (0.12): rotor signature and steady speed argue against</text>
+    <text x="426" y="579">• Drone on a link our sensors miss (0.10)</text>
+  </g>
+
+  <text x="426" y="615" fill="#9fb2c4" font-size="11" font-weight="600" letter-spacing="1">SUGGESTED ACTION</text>
+  <g font-size="12.5" fill="#d5e0ea">
+    <text x="426" y="639">Highest priority. RF cannot locate this operator: point cameras at 047°,</text>
+    <text x="426" y="656">follow the drone procedure, report as possible fibre-optic drone.</text>
+  </g>
+
+  <g font-size="13" font-weight="600">
+    <rect x="426" y="684" width="110" height="34" rx="6" fill="#1f6f4a"/><text x="481" y="706" fill="#e6eef5" text-anchor="middle">Confirm</text>
+    <rect x="546" y="684" width="110" height="34" rx="6" fill="#6b5a1f"/><text x="601" y="706" fill="#e6eef5" text-anchor="middle">Correct</text>
+    <rect x="666" y="684" width="110" height="34" rx="6" fill="#1f4a6f"/><text x="721" y="706" fill="#e6eef5" text-anchor="middle">Ask</text>
+  </g>
+  <text x="960" y="732" fill="#4d6073" font-size="10" text-anchor="end">Simulated data · concept demo</text>
+</svg>
